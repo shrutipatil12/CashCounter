@@ -11,4 +11,9 @@ public class QueueOperatonTest {
         Assertions.assertEquals(true, queueOperation.isEmpty());
     }
 
+    @Test
+    void givenOnePersonInQueue_WhenCheckQueueIsEmptyOrNot_ThenShouldReturnQueueIsNotEmpty() {
+        QueueOperation queueOperation = new QueueOperation(1);
+        Assertions.assertEquals(false, queueOperation.isEmpty());
+    }
 }
